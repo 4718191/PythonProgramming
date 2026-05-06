@@ -6,13 +6,14 @@ import matplotlib.pyplot as plt
 plt.figure(figsize=(10,8))
 
 
+# xticks()
 
 year = [2006, 2009, 2012, 2015, 2018]
 kor = [547, 546, 554, 524, 526]
 
 ind = np.arange(len(year))
 
-plt.subplot(4,2,1) # 중요
+plt.subplot(4,2,1)
 plt.plot(ind, kor)
 plt.xticks(ind, year)
 plt.ylim(500, 580)
@@ -23,14 +24,14 @@ plt.ylabel('score')
 
 
 
-
+# 여러 개의 막대 그래프
 
 nation = ['Korea', 'USA', 'Japan', 'France']
 men = [175.5, 176.9, 172.1, 178.6]
 women = [163.2, 163.3, 158.5, 164.5]
 ind = np.arange(len(nation))
 
-plt.subplot(4,2,2) # 중요
+plt.subplot(4,2,2)
 plt.bar(ind, men, color='b', label='men')
 plt.bar(ind, women, color='r', label='women')
 plt.xticks(ind, nation)
@@ -40,14 +41,14 @@ plt.legend()
 
 
 
-
+#
 
 nation = ['Korea', 'USA', 'Japan', 'France']
 men = [175.5, 176.9, 172.1, 178.6]
 women = [163.2, 163.3, 158.5, 164.5]
 ind = np.arange(len(nation))
 
-plt.subplot(4,2,3) # 중요
+plt.subplot(4,2,3)
 plt.bar(ind-0.2, men, color='b', width=0.4, label='men')
 plt.bar(ind+0.2, women, color='r', width=0.4, label='women')
 plt.xticks(ind, nation)
@@ -62,7 +63,7 @@ plt.legend()
 
 
 
-
+# 누적 막대 그래프
 
 year = [2017, 2018, 2019, 2020, 2021]
 spring = np.array([124.9, 383.5, 175.0, 173.7, 330.5])
@@ -70,7 +71,7 @@ summer = np.array([612.7, 620.6, 508.2, 1037.6, 612.8])
 autumn = np.array([177.9, 351.3, 440.8, 270.4, 256.4])
 winter = np.array([75.2, 68.7, 168.8, 47.8, 13.3])
 
-plt.subplot(4,2,4) # 중요
+plt.subplot(4,2,4)
 plt.bar(year, spring, label='spring')
 plt.bar(year, summer, bottom=spring, label='summer')
 plt.bar(year, autumn, bottom=spring+summer, label='autumn')
@@ -84,11 +85,11 @@ plt.legend()
 x = np.linspace(-np.pi, np.pi*2, 100)
 
 plt.subplot(4,2,5) # 중요
-plt.plot(x, np.sin(x), label='sin')
+plt.plot(x, np.sin(x), label='sin') # sin()
 plt.legend()
 
 plt.subplot(4,2,6) # 중요
-plt.plot(x, np.cos(x), label='cos')
+plt.plot(x, np.cos(x), label='cos') # cos()
 plt.legend()
 
 
